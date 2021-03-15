@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>002</title>
+</head>
+<body>
+    <script>
+    
+        function sum(a,b) {
+            return a+b
+        }
+        
+        console.log(sum(10,20))
+        
+        var another = sum;
+        
+        console.log(another(10,5))
+        
+        sum = null;
+        
+        console.log(sum)
+    
+        function createComparison(propertyName) {
+            
+            return function (obj1, obj2) {
+                var val1 = obj1[propertyName]
+                var val2 = obj2[propertyName]
+                
+                if (val1 < val2) {
+                    return -1;
+                }else if (val1 > val2) {
+                    return 1;
+                }else {
+                    return 0;
+                }
+            }
+        }
+        
+        var data = [{name:'Zachary', age: 20}, {name:'Nick', age: 30}]
+    
+        data.sort(createComparison('name'))
+        
+        console.log(data[0])
+        console.log(data)
+
+
+        data.sort(createComparison('age'))
+        
+        console.log(data[0])
+        
+        console.log(data)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

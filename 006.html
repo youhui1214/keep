@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>006</title>
+</head>
+<body>
+
+    <script>
+    
+        // 箭头函数
+        
+        // var f = v => v;
+        
+        var f = function (v) {
+            
+            return v;
+        };
+        
+        var sum = (num1,num2) => num1 + num2;
+        
+        
+        // es6
+        /*function foo() {
+            setTimeout(()=>{
+                console.log('id',this.id)
+            },100)
+        }
+        */
+        
+        // es5
+        
+        function foo() {
+            var _this = this;
+            
+            setTimeout(function () {
+                console.log('id',_this.id)
+            },100)
+        }
+        
+        
+        const set = new  Set([1,2,3,4,3])
+    
+        console.log(set)
+        console.log([...set])
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

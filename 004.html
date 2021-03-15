@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>004</title>
+</head>
+<body>
+    <script>
+       
+       // 工厂模式：缺点--无法判断对象实例的类型
+       
+        /*function createPerson(name, age, job) {
+            var o = new Object();
+            
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.sayName = function () {
+                console.log(this.name)
+            };
+            
+            return o;
+        }
+        
+        var per1 = createPerson('nike', 20, 'sf')
+        var per2 = createPerson('ke', 10, 'sffff')
+    */
+    
+    // 构造函数模式： sayName函数会被多个实例创建，浪费内存，不优雅
+    
+        /*function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = function () {
+                console.log(this.name)
+            };
+        }
+        
+        var p1 = new Person('huj', 11, 'dd')
+        var p2 = new Person('jjj', 22, 'fff')
+    */
+    
+        // 原型模式：缺点==1，不能传递参数， 2，对数组等引用类型的值会被修改覆盖。
+       /* function Person() {
+        
+        }
+        
+        Person.prototype.name = 'nike';
+        Person.prototype.age = 222;
+        Person.prototype.job = 'gg';
+        Person.prototype.sayName = function () {
+            console.log(this.name);
+        };
+        
+        var per1 = new Person();
+        per1.sayName();
+
+       var per2 = new Person();
+       per1.sayName();
+    
+       console.log(per1.sayName == per2.sayName);*/
+       
+       // 组合使用构造函数模式和原型模式
+       
+        function Person(name, age, job,arr) {
+            this.name = name;
+            this.age = age;
+            
+            
+            this.job = job;
+            this.arr = arr;
+        }
+        
+        Person.prototype = {
+            constructor: Person,
+            sayName() {
+                console.log(this.name)
+            }
+        }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
