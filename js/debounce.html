@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>debounce</title>
+    <style>
+      .main {
+        width: 400px;
+        height: 2000px;
+        background-color: #BCE8F1;
+        overflow: scroll;
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <button id="submit" onclick="tt()">点击debounce</button>
+        <p>ff</p>
+        <button onclick="tt.cancel()">取消debounce</button>
+    </div>
+    
+    // 防抖
+    
+    <script>
+    
+        function test() {
+            console.log(200);
+        }
+    
+    
+        const debounce = (fn, wait = 50) => {
+            let timer = 0;
+            
+            let debounced = (...args) => {
+                if (timer) clearTimeout(timer);
+                
+                timer = setTimeout(() => {
+                    fn.apply(this, args)
+                }, wait)
+            
+            }
+            
+            return debounced;
+        }
+        
+        const tt = debounce(test, 3000)
+        
+        console.log(tt)
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

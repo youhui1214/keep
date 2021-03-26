@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>class</title>
+</head>
+<body>
+    <script>
+    
+        // es5
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        
+        Point.prototype.toString = function () {
+            return 'this.x'
+        }
+        
+        var p = new Point(1,2);
+        
+        
+        
+        // es6
+        
+        class Point2 {
+            constructor(x,y) {
+                this.x = x;
+                this.y = y;
+            }
+            
+            toString() {
+                return 'this'
+            }
+        }
+        
+        
+        class ColorPoint extends Point {
+            constructor(x,y,color) {
+                super(x,y);
+                
+                this.color = color;
+            }
+            
+            toString() {
+                return this.color+'+'+super.toString();
+            }
+        }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>007</title>
+</head>
+<body>
+    <script>
+    
+        /*function* helloWorldGenerator() {
+            yield 'hello';
+            yield 'world';
+            yield 'ending';
+        }
+    
+        var hw = helloWorldGenerator();
+        
+       console.log( hw.next())
+       console.log( hw.next())
+       console.log( hw.next())
+       console.log( hw.next())*/
+    
+       /* function timeout(ms) {
+            return new Promise(resolve => {
+                setTimeout(resolve,ms)
+            })
+        }
+        
+        async function asyncPrint(value, ms) {
+            await timeout(ms);
+            console.log(value);
+        }
+        
+        asyncPrint('hello', 2000)*/
+
+
+        console.log('script start');
+        setTimeout(function() {
+            console.log('setTimeout');
+            Promise.resolve().then(function() {
+                console.log('promise3');
+            }).then(function() {
+                console.log('promise4');
+            });
+        }, 0);
+        Promise.resolve().then(function() {
+            console.log('promise1');
+        }).then(function() {
+            console.log('promise2');
+        });
+        console.log('script end');
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

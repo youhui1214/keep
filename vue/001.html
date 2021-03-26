@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>001</title>
+</head>
+<body>
+
+    
+    <script>
+    
+        let person = {
+            name: 'nike',
+        }
+
+        let age = 22;
+        
+        Object.defineProperty(person, 'age', {
+            configurable: false,
+            enumerable: true,
+            // writable: true,
+            
+            get() {
+                return age;
+            },
+            
+            set(newValue) {
+                if (newValue === 22) {
+                    console.log('还是22，新的值没有改变');
+                } else {
+                    age = newValue;
+                    console.log(age +'值改变')
+                }
+                
+            }
+            
+        })
+        
+        
+        person.age = 33;
+        
+        
+        person.age = 55;
+        
+        
+        person.age = 22;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>手写promise</title>
+</head>
+<body>
+
+    <script>
+    
+        function MyPromise(fn) {
+        
+            const that = this;
+            that.state = 'pending';
+            that.value = null;
+            
+        
+            function resolve(value) {
+                if (that.state === 'pending') {
+                    that.state = 'resolved';
+                    that.value = value;
+                }
+            }
+    
+            function reject(value) {
+                if (that.state === 'pending') {
+                    that.state = 'rejected';
+                    that.value = value;
+                }
+            }
+            
+            try {
+                fn(resolve,reject)
+            } catch (e) {
+                reject(e)
+            }
+        }
+
+
+
+        MyPromise.prototype.then = function (onFulfilled, onRejected) {
+            const that = this;
+            
+            onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : v =>v;
+            onRejected = typeof onRejected === 'function' ? onRejected : r => { throw r };
+            
+            
+            if (that.state === 'resolved') {
+                onFulfilled(that.value)
+            }
+            
+            if (that.state === 'rejected') {
+                onRejected(that.value)
+            }
+            
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

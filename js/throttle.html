@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>throttle</title>
+</head>
+<body>
+
+
+    <script>
+        // 节流
+        const throttle = (fn, wait) => {
+            let timer = 0;
+            
+            return (...args) => {
+                if (!timer) {
+                    fn.apply(this,args);
+                    
+                    timer = setTimeout(() => {
+                        timer = 0;
+                    }, wait)
+                }
+            }
+        }
+
+
+        // 防抖
+        const debounce = (fn, wait = 50) => {
+            let timer = 0;
+    
+            return (...args) => {
+                if (timer) clearTimeout(timer);
+        
+                timer = setTimeout(() => {
+                    fn.apply(this, args)
+                }, wait)
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

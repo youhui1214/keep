@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>promise2</title>
+</head>
+<body>
+
+    <script>
+    
+        // 手写promise
+        
+        const PENDING = 'pending';
+        const RESOLVED = 'resolved';
+        const REJECTED = 'rejected';
+        
+        
+        function MyPromise(fn) {
+        
+            const that = this;
+            that.state = PENDING;
+            that.value = null;
+            
+            // 保存多个回调函数
+            that.resolvedCallback = [];
+            that.rejectdCallback = [];
+            
+            function resolve(value) {
+            
+                if (that.state === PENDING){
+    
+                    that.value = value;
+                    that.state = RESOLVED;
+                    
+                    that.resolvedCallback.forEach(callback => {
+                        callback(value)
+                    })
+                }
+            }
+    
+            function reject(value) {
+        
+                if (that.state === PENDING){
+            
+                    that.value = value;
+                    that.state = REJECTED;
+            
+                    that.rejectdCallback.forEach(callback => {
+                        callback(value)
+                    })
+                }
+            }
+            
+            try {
+                fn(resolve,reject)
+            } catch (e) {
+                reject(e)
+            }
+        }
+
+        MyPromise.prototype.then = function (onResolved, onRejected) {
+            const that = this;
+    
+            onResolved = typeof onResolved === 'function' ? onResolved : v => v;
+            onRejected = typeof onRejected === 'function' ? onRejected : r => {throw r};
+            
+            if (that.state === PENDING) {
+                that.resolvedCallback.push(onResolved);
+                that.rejectdCallback.push(onRejected);
+            }
+        
+            if (that.state === RESOLVED) {
+                onResolved(that.value)
+            }
+    
+            if (that.state === REJECTED) {
+                onRejected(that.value)
+            }
+        
+        }
+        
+        
+        var tt = new MyPromise((resolve,reject) => {
+            console.log(200);
+            
+            resolve(222)
+        })
+        
+        tt.then((data)=>{
+            console.log(data)
+        })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

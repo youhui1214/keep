@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>promise</title>
+</head>
+<body>
+    
+    <script>
+        
+        /*let promise = new Promise((resolve, reject) => {
+            console.log('promise');
+            resolve();
+        })
+        
+        promise.then(function () {
+            console.log('then')
+        })
+        
+        console.log('hi')*/
+        
+        //  异步加载图片
+        
+        /*function loadImgAsync(url) {
+            return new Promise((resolve, reject) => {
+                var image = new Image();
+                
+                image.onload = function () {
+                    resolve(image)
+                }
+                
+                image.onerror = function () {
+                    reject('new error' + url)
+                }
+                
+                image.src = url;
+                
+            })
+        }
+        */
+        // 实现ajax
+        
+        /*var getJson = function (url) {
+            
+            var promise = new Promise((resolve, reject) => {
+                var client = new XMLHttpRequest();
+                client.open('GET', url);
+                client.onreadystatechange = handler;
+                client.responseType = 'json';
+                client.setRequestHeader('Accept', 'application/json');
+                client.send();
+                
+                
+                function handler() {
+                    if (this.readyState !== 4) {
+                        return;
+                    }
+                    if (this.status === 200) {
+                        resolve(this.response);
+                    } else {
+                        reject(new Error(this.statusText))
+                    }
+                    
+                }
+            });
+            
+            return promise;
+            
+        }
+        
+        getJson('./post.json').then(function (json) {
+            console.log(json);
+        }, function (error) {
+            console.log('error' + error)
+        })*/
+        
+        
+        
+        /*var p1 = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                console.log('p1 222')
+                reject(new Error('fail'))
+            },3000)
+            
+            console.log('p1')
+        })
+
+        var p2 = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                console.log('p2')
+               resolve(p1)
+            },1000)
+        })
+        
+        p2.then(result => console.log(result)).catch(error => console.log(error))*/
+        
+        
+        var p = Promise.resolve();
+        
+        p.then(function () {
+            console.log('p')
+        })
+        
+        
+        console.log(200)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    </script>
+</body>
+</html>
