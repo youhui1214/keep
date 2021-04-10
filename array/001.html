@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>001</title>
+</head>
+<body>
+    
+    <script>
+        
+        
+        const listData = [
+            {
+                name: '阿里大药房',
+                idname: 'al',
+                idd: 3,
+                isCheck: false,
+                data: [
+                    {
+                        name: '医用口罩',
+                        id: 300,
+                        idd: 3,
+                        price: 30,
+                        number: 1,
+                        isCheck: true,
+                    },
+                    {
+                        name: '医用耗材',
+                        id: 333,
+                        idd: 3,
+                        price: 300,
+                        number: 2,
+                        isCheck: false,
+                    }
+                ]
+            },
+            {
+                name: '京东药房',
+                idname: 'jd',
+                idd: 1,
+                isCheck: false,
+                data: [
+                    {
+                        name: '脑白金',
+                        id: 100,
+                        idd: 1,
+                        price: 10,
+                        number: 2,
+                        isCheck: false,
+                    },
+                    {
+                        name: '感冒灵',
+                        id: 111,
+                        idd: 1,
+                        price: 100,
+                        number: 1,
+                        isCheck: false,
+                    }
+                ]
+            }
+        ]
+    
+        const tt = listData.map((val, key) => {
+            console.log(val)
+            
+            if (val.idd === 3){
+                // val.isCheck = !val.isCheck
+                val.isCheck = true;
+            }
+            
+            const tt = val.data;
+            
+            tt.map((data, index) =>{
+    
+                if (data.id === 100){
+                    // val.isCheck = !val.isCheck
+                    data.isCheck = true;
+                }
+                
+                return data;
+            })
+            
+            
+            
+            return val
+        
+        })
+        
+        console.log(tt)
+        
+        
+    
+    </script>
+</body>
+</html>
