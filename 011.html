@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        // 实现一个带并发限制的异步调度器Scheduler，保证同时运行的任务最多 n 个。
+    
+        class Scheduler {
+            constructor(count) {}
+        
+            add(task) {}
+        
+            schedule() {}
+        }
+    
+        // Usage
+        const timeout = (time) => {
+            return new Promise((resolve) => {
+                setTimeout(resolve, time);
+            });
+        }
+        const scheduler = new Scheduler(2);
+        const addTask = (time, order) => {
+            // ps:
+            // add方法返回的是一个promise
+            // 每个task都是个方法，它执行之后返回的也是一个promise
+            scheduler
+            .add(() => timeout(time))
+            .then(() => console.log(order));
+        };
+    
+        addTask(1000, '1');
+        addTask(500, '2');
+        addTask(300, '3');
+        addTask(400, '4');
+        // output: 2 3 1 4
+        // 一开始，1、2两个任务进入队列
+        // 500ms时，2完成，输出2，任务3进队
+        // 800ms时，3完成，输出3，任务4进队
+        // 1000ms时，1完成，输出1
+        // 1200ms时，4完成，输出4
+
+
+    </script>
+</body>
+</html>

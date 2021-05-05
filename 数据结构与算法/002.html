@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>002</title>
+</head>
+<body>
+
+
+    <script>
+        
+        var myString = 'aaabcdeeeghhhffiooo';
+        
+        function maxRepeactString(str) {
+            //定义一个对象，对象的每个属性是出现连续重复的字符，属性的属性值是该字符重复的个数
+            var res = {};
+            for(var i =0 ,j = i+1;i <str.length;i++){
+                while(str[i]==str[j]){
+                    j++;
+                    res[str[i]]=j-i;
+                }
+                console.log(res)
+            }
+            return res;
+        }
+        
+        var maxnum =0 ,maxname;
+        var strmore = maxRepeactString(myString);
+        console.log(strmore);
+        //找出第一个最长重复字符的字符
+        for(var item in strmore){
+            if(strmore[item] > maxnum){
+                maxnum = strmore[item];
+                maxname =item ;
+            }
+        }
+    
+        //找出其他的重复出现maxnum次数的字符,存入nameStr中
+        var nameStr = [];
+        for (var i in strmore){
+            if (strmore[i] === maxnum){
+                var str = '';
+                for (var k =0 ;k<maxnum;k++){
+                    str+=i;
+                }
+                nameStr.push(str);
+            }
+        }
+        console.log('存在最长的'+maxnum+'次重复的字符有'+nameStr);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

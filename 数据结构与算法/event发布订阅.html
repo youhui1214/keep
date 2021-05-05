@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>event发布订阅</title>
+</head>
+<body>
+    
+    
+    <script>
+        
+        // 实现一个Event, 包含事件监听，监听一次，解绑，触发。
+        // 事件名可以是任意的，同一事件可以绑定多次
+        
+        class Event {
+            constructor() {
+                this._events = {}
+            }
+            // 绑定
+            on(eventName, callback) {
+                let arr = this._events[eventName] || []
+                arr.push(callback)
+                this._events[eventName] = arr
+                return this
+            }
+            
+            // 解绑
+            off(eventName, callback) {
+                if (this._events[eventName]){
+                    this._events[eventName]=[]
+                }
+                return this
+            }
+            
+            // 触发
+            emit(eventName) {
+                if (this._events[eventName]) {
+                    this._events[eventName].map(cb=>{
+                        cb();
+                    })
+                }
+                return this;
+            }
+            
+            // 同on, 但只能触发一次
+            once(eventName, callback) {
+                const only = () =>{
+                    callback.apply(this,arguments)
+                    this.off(eventName, only)
+                }
+                
+                this.on(name,only)
+                return this;
+            }
+        }
+        
+        
+        // eg:
+        const emmiter = new Event();
+        const fn1 = () => console.log('click1');
+        const fn2 = () => console.log('click2');
+        
+        emmiter.on('click', fn1);
+        emmiter.on('click', fn2);
+        emmiter.emit('click'); // 输出 click1 click2
+        
+        /*emmiter.off('click', fn2);
+        emmiter.emit('click'); // 输出 click1
+        emmiter.once('click', fn2);
+        emmiter.emit('click'); // 输出 click1 click2
+        emmiter.emit('click'); // 输出 click1*/
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>背包问题--动态规划</title>
+</head>
+<body>
+    
+    <script>
+        
+        function packageMaxValue(weight, value, size) {
+            
+            let bagMatrix = [];
+            
+            for (let w = 0; w <= size; w++) {
+                bagMatrix[w] = []
+                for (let j = 0; j < 5; j++) {
+                    
+                    if (w === 0) {
+                        bagMatrix[w][j] = 0
+                        continue
+                    }
+                    
+                    if (w < weight[j]) {
+                        bagMatrix[w][j] = bagMatrix[w][j - 1] || 0
+                        continue
+                    }
+                    
+                    bagMatrix[w][j] = Math.max((bagMatrix[w - weight[j]][j - 1] || 0) + value[j], bagMatrix[w][j - 1] || 0)
+                    
+                }
+            }
+            
+            return bagMatrix;
+        }
+        
+        
+        let weight = [4, 5, 6, 2, 2]
+        
+        let value = [6, 4, 5, 3, 6]
+        
+        
+        console.log(packageMaxValue(weight, value, 10))
+    
+    
+    </script>
+</body>
+</html>
