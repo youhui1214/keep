@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>promise2</title>
+</head>
+<body>
+
+    <script>
+        const PENDING = 'pending';
+        const RESOLVED = 'resolved';
+        const REJECTED = 'rejected';
+    
+        
+        function MPromise(fn) {
+            const that = this;
+            
+            that.state = PENDING;
+            that.value = null;
+        
+            
+            function resolve(value) {
+                if (that.state === PENDING){
+                    that.value = value
+                    that.state = RESOLVED
+                }
+            }
+        
+            function reject(value) {
+                if (that.state === PENDING){
+                    that.value = value
+                    that.state = REJECTED
+                }
+            }
+            
+            try {
+                fn(resolve,reject)
+            }catch (e) {
+                reject(e)
+            }
+        }
+        
+        MPromise.prototype.then = function (fulfill, rejected) {
+        
+            if (this.state === RESOLVED){
+                fulfill(this.value)
+            }
+        
+        
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

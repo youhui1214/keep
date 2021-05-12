@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>001</title>
+</head>
+<body>
+
+    <script>
+    
+        const s = "We are happy."
+        
+        let arr=[]
+
+        for (const key of s) {
+            // console.log(key)
+            
+            arr.push(key)
+        }
+        
+        console.log(arr)
+        
+        const tt= arr.map((value => {
+            if (value===" ") value='%20'
+            
+            return value
+        }))
+    
+        console.log(tt)
+        console.log(tt.join(''))
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

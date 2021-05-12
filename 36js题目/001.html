@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>001</title>
+</head>
+<body>
+    
+    <script>
+    
+    // 数据类型判断
+    function typeOf(obj) {
+        return Object.prototype.toString.call(obj).slice(8,-1).toLowerCase()
+    }
+    typeOf([])        // 'array'
+    typeOf({})        // 'object'
+    typeOf(new Date)  // 'date'
+    
+    // 2,数组去重
+    
+    function flatten(arr) {
+        let result = []
+    
+        for (let i = 0; i < arr.length; i++) {
+            if (Array.isArray(arr[i])){
+                result = result.concat(flatten(arr[i]))
+            }else {
+                result.push(arr[i])
+            }
+        }
+        
+        return result;
+    }
+    
+    // 3,深浅拷贝
+    
+    function shallowCopy(obj) {
+        if (typeof obj !== 'object') return;
+        
+        let newData = obj instanceof Array ? [] : {}
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)){
+                newData[key] = obj[key]
+            }
+        }
+        return newData;
+    }
+    
+    // 4, forEach
+    
+    Array.prototype.forEach2 = function () {
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
