@@ -1,0 +1,566 @@
+[
+  {
+    "dictionaryCategoryCode": "100",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "852823fe-d119-50ab-e867-39f88f4c39b6",
+        "creationTime": "2020-10-31T13:26:50.039769",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100101",
+        "keyType": 1,
+        "text": "计划",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "a4b9e5c1-de55-91b3-b041-39f88f4c7771",
+        "creationTime": "2020-10-31T13:27:05.843209",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100102",
+        "keyType": 1,
+        "text": "准备",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "3cfd6a59-eb4b-c56d-70d1-39f88f4cac2a",
+        "creationTime": "2020-10-31T13:27:19.340038",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100103",
+        "keyType": 1,
+        "text": "生产",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "73eddd79-0fe8-49b9-3f2b-39f88f4d13a1",
+        "creationTime": "2020-10-31T13:27:45.826382",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100104",
+        "keyType": 1,
+        "text": "清理",
+        "orderNumber": 4,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "adc92fb1-bfc0-fad5-26a4-39f88f4d3d69",
+        "creationTime": "2020-10-31T13:27:56.522525",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100105",
+        "keyType": 1,
+        "text": "暂停",
+        "orderNumber": 5,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "771aadd4-5239-6170-ae6c-39f88f4d7367",
+        "creationTime": "2020-10-31T13:28:10.345094",
+        "dictionaryCategoryId": "7250a66a-8935-7ad9-05fc-39f88f4bf100",
+        "key": "100106",
+        "keyType": 1,
+        "text": "结束",
+        "orderNumber": 6,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "101",
+    "dictionaryValues": []
+  },
+  {
+    "dictionaryCategoryCode": "stop_reason",
+    "dictionaryValues": []
+  },
+  {
+    "dictionaryCategoryCode": "planProductStatus",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "5d0dd905-5a61-12e4-f953-39f8c853379e",
+        "creationTime": "2020-11-11T15:12:49.575532",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "5",
+        "keyType": 1,
+        "text": "计划",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "e7499d2f-69e9-b1b2-eb83-39f8c85383bc",
+        "creationTime": "2020-11-11T15:13:09.053454",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "1",
+        "keyType": 1,
+        "text": "准备",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "504e7505-6848-da02-0fb6-39f8c853c96c",
+        "creationTime": "2020-11-11T15:13:26.893871",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "2",
+        "keyType": 1,
+        "text": "生产",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "d80ddcf5-0d57-f4aa-d0ce-39f8c8541953",
+        "creationTime": "2020-11-11T15:13:47.348029",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "4",
+        "keyType": 1,
+        "text": "清理",
+        "orderNumber": 4,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "3ffa3420-ec44-6637-ca2f-39f8c8547060",
+        "creationTime": "2020-11-11T15:14:09.633453",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "3",
+        "keyType": 1,
+        "text": "暂停",
+        "orderNumber": 5,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "87e95b64-6562-a60d-9d1d-39f8c854b8ee",
+        "creationTime": "2020-11-11T15:14:28.207699",
+        "dictionaryCategoryId": "b81349b2-1a34-71e0-6baa-39f8c85272d2",
+        "key": "6",
+        "keyType": 1,
+        "text": "结束",
+        "orderNumber": 6,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "verify_type",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "88591985-b40c-c6bd-9320-39f8d25b0899",
+        "creationTime": "2020-11-13T13:57:33.977698",
+        "dictionaryCategoryId": "686839e1-98b1-f347-0aac-39f8d2565cd6",
+        "key": "1",
+        "keyType": 1,
+        "text": "正常校版",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "b0fe5fd0-07c8-2952-dff6-39f8d25b3655",
+        "creationTime": "2020-11-13T13:57:45.686394",
+        "dictionaryCategoryId": "686839e1-98b1-f347-0aac-39f8d2565cd6",
+        "key": "2",
+        "keyType": 1,
+        "text": "普通校版",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "fb10167d-abac-e0b4-e1a5-39f8d25b58d5",
+        "creationTime": "2020-11-13T13:57:54.517765",
+        "dictionaryCategoryId": "686839e1-98b1-f347-0aac-39f8d2565cd6",
+        "key": "3",
+        "keyType": 1,
+        "text": "打样",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "return_reason",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "8e25d11e-b141-39fc-6b44-39f8d25ba62b",
+        "creationTime": "2020-11-13T13:58:14.316044",
+        "dictionaryCategoryId": "72524fe6-fee4-f6ad-b4c0-39f8d256a091",
+        "key": "107001",
+        "keyType": 1,
+        "text": "不良品",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "e464de49-e754-b0fa-1a7d-39f8d25bdcb2",
+        "creationTime": "2020-11-13T13:58:28.275074",
+        "dictionaryCategoryId": "72524fe6-fee4-f6ad-b4c0-39f8d256a091",
+        "key": "107002",
+        "keyType": 1,
+        "text": "报废",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "d938b224-b987-b365-c31f-39f8d25c0c3c",
+        "creationTime": "2020-11-13T13:58:40.445141",
+        "dictionaryCategoryId": "72524fe6-fee4-f6ad-b4c0-39f8d256a091",
+        "key": "107003",
+        "keyType": 1,
+        "text": "其他",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "true_false",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "5d361d00-7e1e-5d34-30f5-39f8bdee9d6e",
+        "creationTime": "2020-11-09T14:46:44.335583",
+        "dictionaryCategoryId": "fd66e8a2-8adb-eff7-6c3f-39f8bdedb42e",
+        "key": "true",
+        "keyType": 1,
+        "text": "是",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "196117ac-49b7-f697-6b45-39f8bdeede19",
+        "creationTime": "2020-11-09T14:47:00.890435",
+        "dictionaryCategoryId": "fd66e8a2-8adb-eff7-6c3f-39f8bdedb42e",
+        "key": "false",
+        "keyType": 1,
+        "text": "否",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "busi_team_type",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "a1d06916-ed10-8da9-19c1-39f929d2e98f",
+        "creationTime": "2020-11-30T13:35:28.144931",
+        "dictionaryCategoryId": "87ce48a4-0198-c065-7016-39f929d0c336",
+        "key": "false",
+        "keyType": 1,
+        "text": "白班",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "702334c4-77c1-2862-22b2-39f929d316c4",
+        "creationTime": "2020-11-30T13:35:39.71768",
+        "dictionaryCategoryId": "87ce48a4-0198-c065-7016-39f929d0c336",
+        "key": "true",
+        "keyType": 1,
+        "text": "夜班",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "ud_state",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "0cf9241e-e04b-172c-0c45-39f92b3197c3",
+        "creationTime": "2020-11-30T19:58:30.340779",
+        "dictionaryCategoryId": "0fd55c14-8ccc-f834-9bde-39f92b313eb5",
+        "key": "2",
+        "keyType": 1,
+        "text": "未生产",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "0701977e-f0a2-9b92-4b56-39f92b31bb9f",
+        "creationTime": "2020-11-30T19:58:39.520323",
+        "dictionaryCategoryId": "0fd55c14-8ccc-f834-9bde-39f92b313eb5",
+        "key": "5",
+        "keyType": 1,
+        "text": "生产中",
+        "orderNumber": 5,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "09572e2a-6022-dd8f-e686-39f92b31e1f9",
+        "creationTime": "2020-11-30T19:58:49.338744",
+        "dictionaryCategoryId": "0fd55c14-8ccc-f834-9bde-39f92b313eb5",
+        "key": "8",
+        "keyType": 1,
+        "text": "生产完成",
+        "orderNumber": 8,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "18d3eacd-ae8d-e676-0930-39f92b320a99",
+        "creationTime": "2020-11-30T19:58:59.73857",
+        "dictionaryCategoryId": "0fd55c14-8ccc-f834-9bde-39f92b313eb5",
+        "key": "11",
+        "keyType": 1,
+        "text": "撤销",
+        "orderNumber": 11,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "5439ba6b-057d-f605-ae6c-39f92b32470c",
+        "creationTime": "2020-11-30T19:59:15.214226",
+        "dictionaryCategoryId": "0fd55c14-8ccc-f834-9bde-39f92b313eb5",
+        "key": "15",
+        "keyType": 1,
+        "text": "退回",
+        "orderNumber": 15,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "route_state",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "5060caf7-3190-6369-8362-39f8f178c646",
+        "creationTime": "2020-11-19T14:58:16.774782",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "1",
+        "keyType": 1,
+        "text": "准备",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "b0b2f7e8-bbe2-f7a1-12d4-39f8f178df73",
+        "creationTime": "2020-11-19T14:58:23.219937",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "2",
+        "keyType": 1,
+        "text": "生产",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "b04f66b3-1584-0803-e276-39f8f178f910",
+        "creationTime": "2020-11-19T14:58:29.777553",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "3",
+        "keyType": 1,
+        "text": "暂停",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "67f8f9b6-caa7-cb21-23c0-39f8f179152b",
+        "creationTime": "2020-11-19T14:58:36.972134",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "4",
+        "keyType": 1,
+        "text": "清理",
+        "orderNumber": 4,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "f797a7b4-3a2a-dd0d-a3eb-39f8f1792deb",
+        "creationTime": "2020-11-19T14:58:43.307995",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "5",
+        "keyType": 1,
+        "text": "计划",
+        "orderNumber": 5,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "3350a98f-3bc7-1d25-1ef1-39f8f1794c28",
+        "creationTime": "2020-11-19T14:58:51.049503",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "6",
+        "keyType": 1,
+        "text": "结束",
+        "orderNumber": 6,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "b383638b-bde8-d6c6-86f4-39f8f1798c36",
+        "creationTime": "2020-11-19T14:59:07.447368",
+        "dictionaryCategoryId": "185ba5de-190e-7ee1-098f-39f8f16ec556",
+        "key": "7",
+        "keyType": 1,
+        "text": "转线",
+        "orderNumber": 7,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "unit_const",
+    "dictionaryValues": []
+  },
+  {
+    "dictionaryCategoryCode": "material_status",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "4f82f23a-5292-ee41-d396-39f93d9f21ac",
+        "creationTime": "2020-12-04T09:51:18.957369",
+        "dictionaryCategoryId": "d26d31ab-c97a-f903-b779-39f93d9db889",
+        "key": "1",
+        "keyType": 1,
+        "text": "合格",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "distribution_status",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "bee0b2d5-a950-55ed-f3f7-39f93d9e9ffc",
+        "creationTime": "2020-12-04T09:50:45.758055",
+        "dictionaryCategoryId": "5044246a-9263-792e-96a8-39f93d9d651c",
+        "key": "0",
+        "keyType": 1,
+        "text": "配送中",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "2d78a75b-ac3e-6fd6-6c0e-39f93d9eccb2",
+        "creationTime": "2020-12-04T09:50:57.204122",
+        "dictionaryCategoryId": "5044246a-9263-792e-96a8-39f93d9d651c",
+        "key": "1",
+        "keyType": 1,
+        "text": "已完成",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "db3a576e-eef2-7ef9-7ed1-39f93d9eec8f",
+        "creationTime": "2020-12-04T09:51:05.360926",
+        "dictionaryCategoryId": "5044246a-9263-792e-96a8-39f93d9d651c",
+        "key": "2",
+        "keyType": 1,
+        "text": "已取消",
+        "orderNumber": 3,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "sign_type",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "c48c34e2-bc41-77d0-655d-39f9bf5d601d",
+        "creationTime": "2020-12-29T14:30:07.646721",
+        "dictionaryCategoryId": "8e6c2c0d-4680-6b43-7f33-39f9bf5cc63b",
+        "key": "0",
+        "keyType": 1,
+        "text": "计划",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      },
+      {
+        "extraProperties": {},
+        "id": "c9fd270c-6a74-6c12-3c30-39f9bf5d75a1",
+        "creationTime": "2020-12-29T14:30:13.154529",
+        "dictionaryCategoryId": "8e6c2c0d-4680-6b43-7f33-39f9bf5cc63b",
+        "key": "1",
+        "keyType": 1,
+        "text": "新增",
+        "orderNumber": 2,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  },
+  {
+    "dictionaryCategoryCode": "wr_status",
+    "dictionaryValues": [
+      {
+        "extraProperties": {},
+        "id": "4a1c179e-d241-a34a-5cdc-39fa31a81511",
+        "creationTime": "2021-01-20T19:08:26.258318",
+        "dictionaryCategoryId": "becac2e6-d19c-aac2-8828-39fa31a7c101",
+        "key": "0",
+        "keyType": 1,
+        "text": "准备",
+        "orderNumber": 1,
+        "remark": "",
+        "payload": ""
+      }
+    ]
+  }
+]
